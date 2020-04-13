@@ -1,0 +1,9 @@
+.idea
+.vscode
+.elixir_ls
+node_modules
+__pycache__
+
+*.pyc
+*.log
+*.DS_Store

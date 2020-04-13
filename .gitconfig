@@ -1,0 +1,9 @@
+# This is Git's per-user configuration file.
+[user]
+	name = jukvalim
+	email = jukka.valimaa@gmail.com
+[core]
+  excludesfile = ~/.gitignore
+
+[alias]
+  psu = "!f(){ git push -u origin $(git rev-parse --abbrev-ref HEAD); };f"
