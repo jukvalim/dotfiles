@@ -100,13 +100,25 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh
 
-
 export PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
 setopt interactivecomments
 
 # init pyenv
 eval "$(pyenv init -)"
 
+
+# Add things we want to be on PATH
+paths_to_add=(
+    "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+)
+
+for p in $paths_to_add
+do
+  export PATH="$PATH:$p"
+done
+
+
+# set up extra configuration from other files
 run_file()
 {
   filu=$1
