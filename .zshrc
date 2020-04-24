@@ -117,6 +117,13 @@ do
   export PATH="$PATH:$p"
 done
 
+# Set KUBECONFIG to all my kubeconfig files
+export KUBECONFIG="$HOME/.kube/config"
+for filename in $HOME/.kube/*_kubeconfig; do
+    [ -e "$filename" ] || continue
+    export KUBECONFIG="$KUBECONFIG:$filename"
+done
+
 
 # set up extra configuration from other files
 run_file()
