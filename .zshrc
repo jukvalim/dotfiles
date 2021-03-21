@@ -146,6 +146,7 @@ extra_conf_files=(
   $HOME/.iterm2_shell_integration.zsh 
   $HOME/.local_zshrc
   $HOME/dotfiles/.docker_aliases
+  $HOME/dotfiles/.kube_aliases
 )
 
 for f in $extra_conf_files
