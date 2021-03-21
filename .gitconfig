@@ -12,3 +12,5 @@
   mine = log --author=jukvalim --author=jukka.valimaa
   # undo latest commit
   resetlast = reset HEAD~
+[pull]
+	rebase = false

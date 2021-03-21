@@ -70,7 +70,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git django docker kubectl)
+plugins=(
+  git
+  django
+  docker
+  kubectl
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,7 +114,7 @@ eval "$(pyenv init -)"
 
 # Add things we want to be on PATH
 paths_to_add=(
-    "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+    "/Applications/Visual Studio Code.app/Contents/Resources/app/bin",
 )
 
 for p in $paths_to_add
@@ -140,6 +145,7 @@ extra_conf_files=(
   $HOME/bin/venvwrapper.sh 
   $HOME/.iterm2_shell_integration.zsh 
   $HOME/.local_zshrc
+  $HOME/dotfiles/.docker_aliases
 )
 
 for f in $extra_conf_files
@@ -147,3 +153,6 @@ do
   run_file $f  
 done
 
+# When installing Erlang with asdf, this gives
+# helpful docs for Erlang functions in iex.
+export KERL_BUILD_DOCS="yes"
