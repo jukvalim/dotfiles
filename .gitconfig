@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
 	name = jukvalim
-	email = jukka.valimaa@gmail.com
+	email = jukka@jukvalim.net
 [core]
   excludesfile = ~/.gitignore
 
