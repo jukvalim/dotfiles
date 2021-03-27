@@ -109,6 +109,15 @@ dkexe() {
   docker exec -it $1 $2
 }
 
+# run a command from docker image, then remove container
+dkcmd () {
+  all_args=("$@")
+  image=$1
+  command=$2
+  rest_args=("${all_args[@]:2}")
+  docker run --rm --net host $1 $2 $rest_args
+}
+
 dkreboot() {
   osascript -e 'quit app "Docker"'
   countdown 2
