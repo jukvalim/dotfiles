@@ -75,6 +75,7 @@ plugins=(
   django
   docker
   kubectl
+  web-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -121,6 +122,8 @@ for p in $paths_to_add
 do
   export PATH="$PATH:$p"
 done
+
+autoload zcalc
 
 # Set KUBECONFIG to all my kubeconfig files
 export KUBECONFIG="$HOME/.kube/config"
