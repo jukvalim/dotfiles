@@ -5,7 +5,7 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 set smarttab
-filetype indent on
+filetype indent plugin on
 set autoindent
 
 set relativenumber

@@ -75,7 +75,10 @@ plugins=(
   django
   docker
   kubectl
+  aws
+  gcloud
   web-search
+  terraform
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -160,3 +163,16 @@ done
 # When installing Erlang with asdf, this gives
 # helpful docs for Erlang functions in iex.
 export KERL_BUILD_DOCS="yes"
+
+# "next" and "previous functions to move backwards and forwards in git commits"
+function n() {
+    git log --reverse --pretty=%H master | grep -A 1 $(git rev-parse HEAD) | tail -n1 | xargs git checkout
+}
+
+function p() {
+    git checkout HEAD^1
+}
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias vidir="vidir --verbose"
