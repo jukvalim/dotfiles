@@ -10,7 +10,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
+DEFAULT_USER="jukvalim"
+prompt_context(){}
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -108,8 +110,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh
-
-export PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
 setopt interactivecomments
 
 # init pyenv
@@ -118,7 +118,7 @@ eval "$(pyenv init -)"
 
 # Add things we want to be on PATH
 paths_to_add=(
-    "/Applications/Visual Studio Code.app/Contents/Resources/app/bin",
+    "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 )
 
 for p in $paths_to_add
